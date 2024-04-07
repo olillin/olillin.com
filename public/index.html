@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olillin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="parallax_effect.js"></script>
+</head>
+
+<body>
+    <section class="intro">
+        <img src="/images/olillin.svg" alt="Olillin logo" class="logo">
+        <h1>Hey, I'm Oli!</h1>
+        <p>
+            I'm a Swedish student of information technology with a passion for code and understanding. I experiment with
+            all sorts of bits and bobs, typically involving a healthy amount of programming.
+        </p>
+        <nav>
+            <a href="https://github.com/olillin"><i class="fa fa-github"></i> GitHub</a>
+        </nav>
+    </section>
+    <section class="projects">
+        <h1>Projects</h1>
+        <div class="projectsGrid" id="projectsGrid"></div>
+        <script>
+            const grid = document.getElementById('projectsGrid')
+
+            fetch('/projects.json').then(response => response.json()).then(projects => {
+                projects.forEach(project => {
+                    const article = document.createElement('article')
+
+                    /* Header */
+                    const header = document.createElement('h2')
+                    header.innerHTML = project.name
+                    article.appendChild(header)
+
+                    /* Nav */
+                    const nav = document.createElement('nav')
+                    if (project.website) {
+                        const website = document.createElement('a')
+                        website.href = project.website
+                        website.innerHTML = `<i class="fa fa-globe"></i> Website`
+                        nav.appendChild(website)
+                    }
+                    const sourceCode = document.createElement('a')
+                    sourceCode.href = project.source
+                    sourceCode.innerHTML = '<i class="fa fa-github"></i> Source code'
+                    nav.appendChild(sourceCode)
+                    article.appendChild(nav)
+
+                    /* Description */
+                    const description = document.createElement('p')
+                    description.innerHTML = project.description
+                    article.appendChild(description)
+
+                    grid.appendChild(article)
+                })
+            })
+        </script>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --color-text: #ffffff;
+    --color-brand: #74c164;
+    --color-link-hover: var(--color-brand);
+    --font-family-sans: 'Open Sans';
+}
+
+body {
+    margin: 0;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+
+    background-color: #101114;
+    background-image: url('/images/background.svg');
+    background-size: 104vw;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+p, a, span, h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+    font-family: var(--font-family-sans);
+}
+
+body > * {
+    margin-inline: 8px;
+}
+
+/* Intro */
+.intro {
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 50%;
+    height: 80px;
+}
+
+.intro > nav {
+    justify-content: center;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-link-hover);
+}
+
+/* Main */
+.projects {
+    width: fit-content;
+    max-width: 1200px;
+}
+
+.projects > h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.projectsGrid > article {
+    max-width: 250px;
+}
+
+.projectsGrid nav {
+    margin-top: -1em;
+    font-size: 0.8em;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
