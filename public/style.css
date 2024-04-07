@@ -41,6 +41,10 @@ body > * {
     align-items: center;
 }
 
+.intro p {
+    text-align: center;
+}
+
 .logo {
     border-radius: 50%;
     height: 80px;
