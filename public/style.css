@@ -7,21 +7,32 @@
     --font-family-sans: 'Open Sans';
 }
 
+html,
+body {
+    width: 100vw;
+}
+
 body {
     margin: 0;
     padding-bottom: 4rem;
     overflow-x: hidden;
-
     background-color: #101114;
     background-image: url('/images/background.svg');
     background-size: 104vw;
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 
-p, a, span, h1, h2, h3, h4, h5, h6 {
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--color-text);
     font-family: var(--font-family-sans);
 }
@@ -72,8 +83,8 @@ a:focus {
 
 /* Main */
 .projects {
-    width: fit-content;
-    max-width: 1200px;
+    width: 750px;
+    max-width: 90vw;
 }
 
 .projects > h1 {
@@ -82,13 +93,20 @@ a:focus {
 }
 
 .projectsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 12px;
+    justify-content: center;
 }
 
 .projectsGrid > article {
-    max-width: 250px;
+    flex: 1 1 0px;
+    min-width: 180px;
+    max-width: 400px;
+}
+
+.projectsGrid > article > h2 {
+    word-break: break-word;
 }
 
 .projectsGrid nav {
@@ -103,6 +121,6 @@ a:focus {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
