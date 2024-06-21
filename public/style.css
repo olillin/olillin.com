@@ -18,10 +18,20 @@ body {
     overflow-x: hidden;
     background-color: #101114;
     background-image: url('/images/background.svg');
-    background-size: 104vw;
+    background-repeat: revert;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+}
+@media all and (orientation: portrait) {
+    body {
+        background-size: auto calc(100% + 4vh);
+    }
+}
+@media all and (orientation: landscape) {
+    body {
+        background-size: calc(100% + 4vw) auto;
+    }
 }
 
 p,
