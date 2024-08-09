@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf') format ('truetype');
+}
 
 :root {
     --color-text: #ffffff;
     --color-brand: #74c164;
     --color-link-hover: var(--color-brand);
-    --font-family-sans: 'Open Sans';
+    --font-family-sans: 'Open Sans', sans-serif;
 }
 
 html,
@@ -68,6 +74,7 @@ body > * {
 
 .logo {
     border-radius: 50%;
+    width: 80px;
     height: 80px;
 }
 

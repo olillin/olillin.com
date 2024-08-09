@@ -9,6 +9,7 @@ import './style.css'
 export default function Page(): React.ReactNode {
     return (
         <>
+            <meta name="description" content="Oli's introduction and portfolio featuring different coding projects and links." />
             <Script src="/scripts/parallax-effect.js" />
 
             <section className="intro">
