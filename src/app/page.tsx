@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 import Projects from './components/Projects'
+import Sites from './components/Sites'
 
 import './style.css'
 
@@ -26,6 +27,7 @@ export default function Page(): React.ReactNode {
                 </nav>
             </section>
             <Projects />
+            <Sites />
         </>
     )
 }

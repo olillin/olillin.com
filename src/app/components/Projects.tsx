@@ -22,8 +22,8 @@ export default async function Projects() {
 
     return (
         <section className="projects">
-            <h1>Projects</h1>
-            <div className="projectsGrid">
+            <h2>Projects</h2>
+            <div className="grid projectsGrid">
                 {projects.map(project => (
                     <Project name={project.name} description={project.description} website={project.website} source={project.source} />
                 ))}

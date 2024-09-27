@@ -57,6 +57,11 @@ body > * {
     margin-inline: 8px;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
 /* Intro */
 .intro {
     margin-top: 10rem;
@@ -99,34 +104,29 @@ a:focus {
 }
 
 /* Main */
-.projects {
+section {
     width: 750px;
     max-width: 90vw;
 }
 
-.projects > h1 {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.projectsGrid {
+.grid {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    justify-content: center;
+    justify-content: start;
 }
 
-.projectsGrid > article {
+.grid > article {
     flex: 1 1 0px;
     min-width: 180px;
     max-width: 400px;
 }
 
-.projectsGrid > article > h2 {
+.grid > article > h2 {
     word-break: break-word;
 }
 
-.projectsGrid nav {
+.grid nav {
     margin-top: -1em;
     font-size: 0.8em;
 }
