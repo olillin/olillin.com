@@ -9,9 +9,11 @@ export default async function Site(props) {
                 <a href={props.href} target="_blank">
                     {props.link ?? props.href.replace(/^https:\/\//, '')}
                 </a>
-                <a href={props.source} target="_blank">
-                    <FontAwesomeIcon icon={faGithub} /> Source code
-                </a>
+                {props.source ? (
+                    <a href={props.source} target="_blank">
+                        <FontAwesomeIcon icon={faGithub} /> Source code
+                    </a>
+                ) : null}
             </nav>
         </article>
     )

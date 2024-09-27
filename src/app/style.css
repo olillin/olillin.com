@@ -113,7 +113,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    justify-content: start;
+    justify-content: center;
 }
 
 .grid > article {
