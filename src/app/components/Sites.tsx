@@ -10,7 +10,7 @@ export default async function Sites() {
                 <Site name="Cal's cals" href="https://cal.olillin.com" source="https://github.com/olillin/WebCal-Adapter" />
                 <Site name="Printify Bulk Edit" href="https://printify.olillin.com" source="https://github.com/olillin/printify-bulk-edit" />
                 <Site name="Traffic map" href="https://trafik.olillin.com" source="https://github.com/olillin/live-traffic-map" />
-                <Site name="Published notes" href="https://notes.olillin.com" />
+                <Site name="Cal-ligraphy notes" href="https://notes.olillin.com" />
             </div>
         </section>
     )
