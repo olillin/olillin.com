@@ -6,11 +6,11 @@ export default async function Sites() {
         <section className="sites">
             <h2>Websites</h2>
             <div className="grid sitesGrid">
-                <Site name="Homepage" href="https://olillin.com" source="https://github.com/olillin/olillin.com" />
-                <Site name="Cal's cals" href="https://cal.olillin.com" source="https://github.com/olillin/WebCal-Adapter" />
-                <Site name="Printify Bulk Edit" href="https://printify.olillin.com" source="https://github.com/olillin/printify-bulk-edit" />
-                <Site name="Traffic map" href="https://trafik.olillin.com" source="https://github.com/olillin/live-traffic-map" />
-                <Site name="Cal-ligraphy notes" href="https://notes.olillin.com" />
+                <Site href="https://olillin.com" source="https://github.com/olillin/olillin.com" />
+                <Site href="https://cal.olillin.com" source="https://github.com/olillin/WebCal-Adapter" />
+                <Site href="https://printify.olillin.com" source="https://github.com/olillin/printify-bulk-edit" />
+                <Site href="https://trafik.olillin.com" source="https://github.com/olillin/live-traffic-map" />
+                <Site href="https://notes.olillin.com" />
             </div>
         </section>
     )
