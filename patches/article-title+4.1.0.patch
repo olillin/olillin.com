@@ -1,0 +1,19 @@
+diff --git a/node_modules/article-title/index.js b/node_modules/article-title/index.js
+index b8f6d08..e6fd1e1 100644
+--- a/node_modules/article-title/index.js
++++ b/node_modules/article-title/index.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import {load} from 'cheerio';
+ 
+ const matchers = [
+ 	'.instapaper_title',
+@@ -33,7 +33,7 @@ const findSelectorMatch = $ => {
+ };
+ 
+ export default function articleTitle(html) {
+-	const $ = cheerio.load(html);
++	const $ = load(html);
+ 
+ 	let documentTitle = $('title').text().replace(/\r?\n/g, '');
+ 	documentTitle = (/^[^|\-/•—]+/.exec(documentTitle) || [])[0] || documentTitle;
