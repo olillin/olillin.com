@@ -105,8 +105,7 @@ a:focus {
 
 /* Main */
 section {
-    width: 750px;
-    max-width: 90vw;
+    max-width: 46em;
 }
 
 .grid {
