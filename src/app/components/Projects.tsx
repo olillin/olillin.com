@@ -25,7 +25,7 @@ export default async function Projects() {
             <h2>Projects</h2>
             <div className="grid projectsGrid">
                 {projects.map(project => (
-                    <Project name={project.name} description={project.description} website={project.website} source={project.source} />
+                    <Project key={project.name} name={project.name} description={project.description} website={project.website} source={project.source} />
                 ))}
             </div>
         </section>
