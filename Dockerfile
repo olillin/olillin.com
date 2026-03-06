@@ -29,7 +29,9 @@ WORKDIR /app
 COPY --from=dependencies /app/node_modules ./node_modules
 
 # Copy application source code
-COPY . .
+COPY package.json next.config.ts next-env.d.ts tsconfig.json ./
+COPY app ./app
+COPY public ./public
 
 ENV NODE_ENV=production
 
@@ -38,12 +40,11 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Build Next.js application
-# If you want to speed up Docker rebuilds, you can cache the build artifacts
-# by adding: --mount=type=cache,target=/app/.next/cache
 # This caches the .next/cache directory across builds, but it also prevents
 # .next/cache/fetch-cache from being included in the final image, meaning
 # cached fetch responses from the build won't be available at runtime.
-RUN --mount=type=cache,target=/app/.next/cache \
+RUN --mount=type=secret,id=github_token \
+    --mount=type=cache,target=/app/.next/cache \
     corepack enable pnpm && pnpm build;
 
 # ============================================

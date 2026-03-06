@@ -1,7 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-export default async function Site({href, link, name, source}: { href: string, link?: string, name?: string, source?: string }) {
+export default async function Site({
+    href,
+    link,
+    name,
+    source,
+}: {
+    href: string
+    link?: string
+    name?: string
+    source?: string
+}) {
     const prettyLink = link ?? href.replace(/^https?:\/\//, '')
     let title = name ?? prettyLink
 

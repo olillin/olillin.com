@@ -1,21 +1,21 @@
 'use client'
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect } from 'react'
 
-export default function ParallaxBackground({ children }: { children: ReactNode }) {
+export default function ParallaxBackground({
+    children,
+}: {
+    children: ReactNode
+}) {
     useEffect(() => {
-		const eventHandler = createParallaxHandler(2)
+        const eventHandler = createParallaxHandler(2)
         window.addEventListener('mousemove', eventHandler)
-		return () => {
-			window.removeEventListener('mousemove', eventHandler)
-		}
+        return () => {
+            window.removeEventListener('mousemove', eventHandler)
+        }
     }, [])
 
-	return (
-		<div className="parallax">
-			{children}
-		</div>
-    )
+    return <div className="parallax">{children}</div>
 }
 
 function easeOut(t: number): number {
@@ -30,7 +30,9 @@ function createParallaxHandler(intensity: number) {
         let relativeOffsetX = (mouseEvent.x - halfWidth) / halfWidth
         let relativeOffsetY = (mouseEvent.y - halfHeight) / halfHeight
 
-        document.body.style.backgroundPositionX = -easeOut(relativeOffsetX) * intensity - intensity + 'vw'
-        document.body.style.backgroundPositionY = -easeOut(relativeOffsetY) * intensity - intensity + 'vh'
+        document.body.style.backgroundPositionX =
+            -easeOut(relativeOffsetX) * intensity - intensity + 'vw'
+        document.body.style.backgroundPositionY =
+            -easeOut(relativeOffsetY) * intensity - intensity + 'vh'
     }
 }

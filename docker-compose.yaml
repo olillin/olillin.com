@@ -1,15 +1,12 @@
-# This compose file builds and runs the backend locally for development.
+# This is an example of how to run the backend in production using secret files
+# and using the image from GitHub Packages.
 
-name: olillin-com-dev
+name: olillin-com
 
 services:
     server:
-        build:
-            context: .
-        container_name: olillin-com-dev-server
-        restart: unless-stopped
-        environment:
-            NODE_ENV: development
-
+        image: 'ghcr.io/olillin/olillin.com:latest'
+        container_name: olillin-com-server
+        restart: always
         ports:
             - '3000:3000'
