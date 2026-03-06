@@ -26,10 +26,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^3.2.0",
-    "article-title": "^5.0.0",
     "express": "^4.22.1",
     "get-pinned-repos": "^1.1.0",
-    "get-title-at-url": "^2.0.0",
     "next": "^16.1.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
