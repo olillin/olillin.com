@@ -1,0 +1,15 @@
+# This compose file builds and runs the backend locally for development.
+
+name: olillin-com-dev
+
+services:
+    server:
+        build:
+            context: .
+        container_name: olillin-com-dev-server
+        restart: unless-stopped
+        environment:
+            NODE_ENV: development
+
+        ports:
+            - '3000:3000'
