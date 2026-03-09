@@ -13,7 +13,7 @@ export default async function Site({
     source?: string
 }) {
     const prettyLink = link ?? href.replace(/^https?:\/\//, '')
-    let title = name ?? prettyLink
+    const title = name ?? prettyLink
 
     return (
         <article>

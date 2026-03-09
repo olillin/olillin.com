@@ -27,8 +27,8 @@ function createParallaxHandler(intensity: number) {
         const halfWidth = window.innerWidth / 2
         const halfHeight = window.innerHeight / 2
 
-        let relativeOffsetX = (mouseEvent.x - halfWidth) / halfWidth
-        let relativeOffsetY = (mouseEvent.y - halfHeight) / halfHeight
+        const relativeOffsetX = (mouseEvent.x - halfWidth) / halfWidth
+        const relativeOffsetY = (mouseEvent.y - halfHeight) / halfHeight
 
         document.body.style.backgroundPositionX =
             -easeOut(relativeOffsetX) * intensity - intensity + 'vw'
