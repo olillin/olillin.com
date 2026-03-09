@@ -24,7 +24,7 @@ export default async function Site({
                 </a>
                 {source ? (
                     <a href={source} target="_blank">
-                        <FontAwesomeIcon icon={faGithub} /> Source code
+                        <FontAwesomeIcon icon={faGithub} /> Source
                     </a>
                 ) : null}
             </nav>
