@@ -26,17 +26,14 @@ export default function Page(): React.ReactNode {
                     />
                     <h1>Hey, I&apos;m Oli!</h1>
                     <p>
-                        I&apos;m a Swedish student of information technology
-                        with a passion for code and understanding. I experiment
-                        with all sorts of bits and bobs, typically involving a
+                        I&apos;m a Swedish student at Chalmers studying
+                        software engineering. I love learning and experiment
+                        with all sorts of projects, typically involving a
                         healthy amount of programming.
                     </p>
                     <nav>
                         <a href="https://github.com/olillin">
                             <FontAwesomeIcon icon={faGithub} /> GitHub
-                        </a>
-                        <a href="https://youtube.com/@olillin">
-                            <FontAwesomeIcon icon={faYoutube} /> YouTube
                         </a>
                     </nav>
                 </section>
