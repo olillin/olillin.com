@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import Sites from './components/Sites'
 
 import './style.css'
+import Footer from './components/Footer'
 
 export default function Page(): React.ReactNode {
     return (
@@ -39,6 +40,7 @@ export default function Page(): React.ReactNode {
                 </section>
                 <Projects />
                 <Sites />
+                <Footer />
             </main>
         </>
     )
