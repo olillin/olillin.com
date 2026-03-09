@@ -34,11 +34,11 @@ main {
     max-width: 46em;
 }
 
-@media all and (orientation: portrait) {
-    body {
-        background-size: auto calc(100% + 4vh);
-    }
-}
+/* @media all and (orientation: portrait) { */
+/*     body { */
+/*         background-size: auto calc(100% + 4vh); */
+/*     } */
+/* } */
 @media all and (orientation: landscape) {
     body {
         background-size: calc(100% + 4vw) auto;

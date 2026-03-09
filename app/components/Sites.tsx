@@ -20,10 +20,7 @@ export default async function Sites() {
                     name="TimeSend"
                     source="https://github.com/olillin/timesend"
                 />
-                <Site
-                    href="https://notes.olillin.com"
-                    name="Lecture Notes"
-                />
+                <Site href="https://notes.olillin.com" name="Lecture Notes" />
             </div>
         </section>
     )

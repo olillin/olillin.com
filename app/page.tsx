@@ -27,10 +27,10 @@ export default function Page(): React.ReactNode {
                     />
                     <h1>Hey, I&apos;m Oli!</h1>
                     <p>
-                        I&apos;m a Swedish student at Chalmers studying
-                        software engineering. I love learning and experiment
-                        with all sorts of projects, typically involving a
-                        healthy amount of programming.
+                        I&apos;m a Swedish student at Chalmers studying software
+                        engineering. I love learning and experiment with all
+                        sorts of projects, typically involving a healthy amount
+                        of programming.
                     </p>
                     <nav>
                         <a href="https://github.com/olillin">
