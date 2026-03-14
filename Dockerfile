@@ -43,6 +43,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # cached fetch responses from the build won't be available at runtime.
 RUN --mount=type=secret,id=github_token \
     --mount=type=cache,target=/app/.next/cache \
+    GITHUB_TOKEN_FILE=/run/secrets/github_token \
     corepack enable pnpm && pnpm build;
 
 # ============================================

@@ -8,7 +8,6 @@ export interface Project {
     website: string
 }
 
-const DEFAULT_TOKEN_FILE = '/run/secrets/github_token'
 const DEFAULT_USERNAME = 'olillin'
 
 function getGitHubToken(): string | null {
@@ -17,8 +16,8 @@ function getGitHubToken(): string | null {
     if (envToken != null) return envToken
 
     // Get token from file
-    const tokenFile = process.env.GITHUB_TOKEN_FILE ?? DEFAULT_TOKEN_FILE
-    if (existsSync(tokenFile)) {
+    const tokenFile = process.env.GITHUB_TOKEN_FILE
+    if (tokenFile != null && existsSync(tokenFile)) {
         return readFileSync(tokenFile, 'utf8').trim()
     }
 
