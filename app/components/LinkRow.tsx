@@ -14,7 +14,7 @@ export default function LinkRow({
     small,
 }: {
     links: (LinkOptions | null)[]
-    small: boolean
+    small?: boolean
 }) {
     return (
         <nav className={small ? linkRow.smallRow : linkRow.row}>
