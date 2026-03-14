@@ -7,11 +7,17 @@ export default function ParallaxBackgroundEffect({
 }: {
     children: ReactNode
 }) {
-    const mediaQuery = window.matchMedia(`(prefers-reduced-motion: reduce)`)
-    const [isReduced, setIsReduced] = useState(mediaQuery.matches)
-    mediaQuery.addEventListener('change', () => {
-        setIsReduced(mediaQuery.matches)
-    })
+    const [isReduced, setIsReduced] = useState(true)
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia(`(prefers-reduced-motion: reduce)`)
+        const updateReduced = () => {
+            setIsReduced(mediaQuery.matches)
+        }
+        updateReduced()
+        window.addEventListener('focus', updateReduced)
+        mediaQuery.addEventListener('change', updateReduced)
+    }, [])
 
     useEffect(() => {
         if (isReduced) return
