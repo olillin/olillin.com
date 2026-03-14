@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import grid from '../style/grid.module.scss'
+import LinkRow from './LinkRow'
 
 export default async function Site({
     href,
@@ -16,18 +17,22 @@ export default async function Site({
     const title = name ?? prettyLink
 
     return (
-        <article>
+        <article className={grid.article}>
             <h3>{title}</h3>
-            <nav>
-                <a href={href} target="_blank">
-                    {prettyLink}
-                </a>
-                {source ? (
-                    <a href={source} target="_blank">
-                        <FontAwesomeIcon icon={faGithub} /> Source
-                    </a>
-                ) : null}
-            </nav>
+            <LinkRow
+                small
+                links={[
+                    {
+                        href: href,
+                        text: prettyLink,
+                    },
+                    source && {
+                        href: source,
+                        text: 'Source',
+                        icon: faGithub,
+                    },
+                ]}
+            />
         </article>
     )
 }

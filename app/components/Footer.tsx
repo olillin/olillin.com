@@ -1,6 +1,8 @@
+import footer from './Footer.module.scss'
+
 export default function Footer() {
     return (
-        <footer>
+        <footer className={footer.footer}>
             <span>
                 <a
                     href="https://github.com/olillin/olillin.com"

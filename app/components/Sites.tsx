@@ -1,10 +1,11 @@
 import Site from './Site'
+import grid from '../style/grid.module.scss'
 
 export default async function Sites() {
     return (
         <section className="sites">
             <h2>Websites</h2>
-            <div className="grid sitesGrid">
+            <div className={grid.grid}>
                 <Site
                     href="https://cal.olillin.com"
                     name="Cal's cals"

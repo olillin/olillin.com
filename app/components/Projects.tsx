@@ -1,5 +1,6 @@
 import { getProjects } from '../lib/projects'
 import Project from './Project'
+import grid from '../style/grid.module.scss'
 
 export default async function Projects() {
     const projects = await getProjects()
@@ -11,7 +12,7 @@ export default async function Projects() {
     return (
         <section className="projects">
             <h2>Projects</h2>
-            <div className="grid projectsGrid">
+            <div className={grid.grid}>
                 {projects.map(project => (
                     <Project
                         key={project.name}

@@ -1,22 +1,38 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import grid from '../style/grid.module.scss'
+import LinkRow from './LinkRow'
 
-export default async function Project(props) {
+export default async function Project({
+    name,
+    description,
+    website,
+    source,
+}: {
+    name: string
+    description: string
+    source: string
+    website?: string
+}) {
     return (
-        <article>
-            <h3>{props.name}</h3>
-            <nav>
-                {props.website ? (
-                    <a href={props.website} target="_blank">
-                        <FontAwesomeIcon icon={faGlobe} /> Website
-                    </a>
-                ) : null}
-                <a href={props.source} target="_blank">
-                    <FontAwesomeIcon icon={faGithub} /> Source code
-                </a>
-            </nav>
-            <p>{props.description}</p>
+        <article className={grid.article}>
+            <h3>{name}</h3>
+            <LinkRow
+                small
+                links={[
+                    website && {
+                        href: website,
+                        text: 'Website',
+                        icon: faGlobe,
+                    },
+                    {
+                        href: source,
+                        text: 'Source',
+                        icon: faGithub,
+                    },
+                ]}
+            />
+            <p>{description}</p>
         </article>
     )
 }
