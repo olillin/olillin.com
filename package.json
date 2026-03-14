@@ -1,46 +1,49 @@
 {
-  "name": "website",
-  "version": "2.0.0",
-  "description": "My website homepage",
-  "main": "server.js",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "patch-package"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/olillin/olillin.com.git"
-  },
-  "author": "Olillin",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/olillin/olillin.com/issues"
-  },
-  "homepage": "https://olillin.com",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "article-title": "github:olillin/article-title",
-    "express": "^4.18.2",
-    "get-pinned-repos": "^1.1.0",
-    "get-title-at-url": "^2.0.0",
-    "next": "^16.0.8",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "website": "file:"
-  },
-  "devDependencies": {
-    "@types/node": "20.14.7",
-    "patch-package": "^8.0.0",
-    "postinstall-postinstall": "^2.1.0",
-    "typescript": "5.5.2"
-  }
+    "name": "olillin.com",
+    "version": "3.0.0",
+    "description": "My website homepage",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "format": "prettier . --write --list-different",
+        "checkformat": "prettier . --check",
+        "lint": "eslint",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/olillin/olillin.com.git"
+    },
+    "author": "Olillin",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/olillin/olillin.com/issues"
+    },
+    "homepage": "https://olillin.com",
+    "packageManager": "pnpm@10.28.0",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.7.2",
+        "@fortawesome/free-brands-svg-icons": "^6.7.2",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/react-fontawesome": "^3.2.0",
+        "express": "^4.22.1",
+        "get-pinned-repos": "^1.1.0",
+        "next": "^16.1.6",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@eslint/compat": "^2.0.2",
+        "@eslint/js": "^9.39.3",
+        "@types/node": "20.14.7",
+        "@types/react": "^18.3.28",
+        "@types/react-dom": "^18.3.7",
+        "eslint": "^9.39.3",
+        "eslint-config-next": "^16.1.6",
+        "prettier": "^3.8.1",
+        "sass": "^1.98.0",
+        "typescript": "5.5.2",
+        "typescript-eslint": "^8.56.1"
+    }
 }

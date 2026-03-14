@@ -1,0 +1,19 @@
+.intro {
+    margin-top: 10em;
+    max-width: 25em;
+
+    display: flex;
+    gap: 1em;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    p {
+        text-align: center;
+    }
+}
+
+.logo {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}

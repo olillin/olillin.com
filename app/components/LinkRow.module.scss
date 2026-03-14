@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.smallRow {
+    @extend .row;
+    margin-top: -1em;
+    font-size: 0.8em;
+}
+
+.link {
+    text-decoration: none;
+}

@@ -1,0 +1,13 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: start;
+}
+
+.article {
+    flex: 1 1 0em;
+    min-width: 12em;
+    max-width: 25em;
+    word-break: break-word;
+}
