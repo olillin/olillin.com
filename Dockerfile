@@ -29,9 +29,7 @@ WORKDIR /app
 COPY --from=dependencies /app/node_modules ./node_modules
 
 # Copy application source code
-COPY package.json next.config.ts next-env.d.ts tsconfig.json ./
-COPY app ./app
-COPY public ./public
+COPY . .
 
 ENV NODE_ENV=production
 
